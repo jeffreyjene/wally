@@ -11,14 +11,14 @@
       <visual name="camera">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.018.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.018.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
       <collision name="camera">
         <origin xyz="0.00012 -5e-05 6e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.028.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.028.stl" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -32,14 +32,14 @@
       <visual name="chassis">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.023.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.023.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="chassis">
         <origin xyz="9e-05 0.00061 0.00011" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.026.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.026.stl" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -53,14 +53,14 @@
       <visual name="laser">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.019.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.019.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
       <collision name="laser">
         <origin xyz="0 0 -2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.027.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.027.stl" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -74,7 +74,7 @@
       <visual name="wheel_caster">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.020.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.020.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
@@ -89,14 +89,14 @@
       <visual name="wheel_left">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.022.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.022.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="wheel_left">
         <origin xyz="2e-05 -0.00011 2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.025.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.025.stl" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -110,14 +110,14 @@
       <visual name="wheel_right">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.017.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.017.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="wheel_right">
         <origin xyz="2e-05 0.00255 2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/dae/Cube.024.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.024.stl" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
