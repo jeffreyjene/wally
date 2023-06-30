@@ -82,42 +82,42 @@
 
     <link name="link_wheel_left">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0.00527 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="0" izz="289.19714"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
       </inertial>
       <visual name="wheel_left">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0.00264 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/stl/Cube.022.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cylinder.036.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="yellow"/>
+        <material name="black"/>
       </visual>
       <collision name="wheel_left">
-        <origin xyz="2e-05 -0.00011 2e-05" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/stl/Cube.025.stl" scale="1.0 1.0 1.0"/>
+          <cylinder radius="0.03446" length="0.03"/>
         </geometry>
       </collision>
     </link>
 
     <link name="link_wheel_right">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 -0.00632 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="0" izz="289.19717"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
       </inertial>
       <visual name="wheel_right">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 -0.00316 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/stl/Cube.017.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/stl/Cylinder.037.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="yellow"/>
+        <material name="black"/>
       </visual>
       <collision name="wheel_right">
-        <origin xyz="2e-05 0.00255 2e-05" rpy="0 0 0"/>
+        <origin xyz="0 -0.00052 0" rpy="1.5708 0 0"/>
         <geometry>
-          <mesh filename="file://$(find wally)/meshes/stl/Cube.024.stl" scale="1.0 1.0 1.0"/>
+          <cylinder radius="0.03446" length="0.03"/>
         </geometry>
       </collision>
     </link>
