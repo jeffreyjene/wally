@@ -6,19 +6,19 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="288.5336" ixy="0" ixz="-1e-05" iyy="274.41498" iyz="0" izz="149.48827"/>
+        <inertia ixx="288.5336" ixy="0" ixz="0" iyy="274.41498" iyz="0" izz="149.48827"/>
       </inertial>
       <visual name="camera">
-        <origin xyz="0 0 0" rpy="0 -1.5708 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.018.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.018.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
       <collision name="camera">
-        <origin xyz="-0.05651 -0.0476 0.12457" rpy="0 -1.5708 0"/>
+        <origin xyz="0.00012 -5e-05 6e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.028.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.028.dae" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -27,19 +27,19 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="2658.80078" ixy="-0.00068" ixz="0" iyy="4901.40967" iyz="0" izz="5801.34521"/>
+        <inertia ixx="2658.80078" ixy="0" ixz="0" iyy="4901.40967" iyz="0" izz="5801.34521"/>
       </inertial>
       <visual name="chassis">
-        <origin xyz="0 0 0" rpy="0 0 3.14159"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.023.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.023.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="chassis">
-        <origin xyz="-0.08775 -0.613 0.10621" rpy="0 0 3.14159"/>
+        <origin xyz="9e-05 0.00061 0.00011" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.026.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.026.dae" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -53,14 +53,14 @@
       <visual name="laser">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.019.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.019.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
       <collision name="laser">
-        <origin xyz="0 0 -0.02138" rpy="0 0 0"/>
+        <origin xyz="0 0 -2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.027.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.027.dae" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -74,7 +74,7 @@
       <visual name="wheel_caster">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.020.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.020.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="black"/>
       </visual>
@@ -84,19 +84,19 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="-2e-05" izz="289.19714"/>
+        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="0" izz="289.19714"/>
       </inertial>
       <visual name="wheel_left">
-        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.022.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.022.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="wheel_left">
-        <origin xyz="0.01732 -0.02453 -0.10548" rpy="1.5708 0 0"/>
+        <origin xyz="2e-05 -0.00011 2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.025.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.025.dae" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
@@ -105,54 +105,54 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="1.0"/>
-        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="2e-05" izz="289.19717"/>
+        <inertia ixx="289.20636" ixy="0" ixz="0" iyy="506.04105" iyz="0" izz="289.19717"/>
       </inertial>
       <visual name="wheel_right">
-        <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.017.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.017.dae" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="yellow"/>
       </visual>
       <collision name="wheel_right">
-        <origin xyz="0.01732 0.02454 -2.55418" rpy="-1.5708 0 0"/>
+        <origin xyz="2e-05 0.00255 2e-05" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="..\meshes\dae\Cube.024.dae" scale="1.0 1.0 1.0"/>
+          <mesh filename="file://$(find wally)/meshes/dae/Cube.024.dae" scale="1.0 1.0 1.0"/>
         </geometry>
       </collision>
     </link>
 
     <joint name="link_camera" type="fixed">
-      <origin xyz="-99.50021 -0.66059 75.61109" rpy="-3.14159 1.5708 0"/>
+      <origin xyz="0.0995 0.00066 0.07561" rpy="0 0 0"/>
       <parent link="link_chassis"/>
       <child link="link_camera"/>
     </joint>
 
     <joint name="link_laser" type="fixed">
-      <origin xyz="13.13231 -0.613 104.50001" rpy="0 0 3.14159"/>
+      <origin xyz="-0.01313 0.00061 0.1045" rpy="0 0 0"/>
       <parent link="link_chassis"/>
       <child link="link_laser"/>
     </joint>
 
     <joint name="link_wheel_caster" type="fixed">
-      <origin xyz="98.95988 -0.61332 -7.88988" rpy="0 0 3.14159"/>
+      <origin xyz="-0.09896 0.00061 -0.00789" rpy="0 0 0"/>
       <parent link="link_chassis"/>
       <child link="link_wheel_caster"/>
     </joint>
 
     <joint name="link_wheel_left" type="revolute">
-      <origin xyz="-6.02121 -77.0348 16.15401" rpy="-1.5708 0 3.14159"/>
+      <origin xyz="0.00602 0.07703 0.01615" rpy="0 0 0"/>
       <parent link="link_chassis"/>
       <child link="link_wheel_left"/>
-      <axis xyz="0 0 1.0"/>
+      <axis xyz="0 1.0 0"/>
       <limit lower="-3.14" upper="3.14" effort="0" velocity="0"/>
     </joint>
 
     <joint name="link_wheel_right" type="revolute">
-      <origin xyz="-6.0212 76.51163 16.154" rpy="1.5708 0 3.14159"/>
+      <origin xyz="0.00602 -0.07651 0.01615" rpy="0 0 0"/>
       <parent link="link_chassis"/>
       <child link="link_wheel_right"/>
-      <axis xyz="0 0 1.0"/>
+      <axis xyz="0 -1.0 0"/>
       <limit lower="-3.14" upper="3.14" effort="0" velocity="0"/>
     </joint>
 
