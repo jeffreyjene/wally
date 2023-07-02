@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+  <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+
+    <link name="base_link"></link>
+
+    <link name="link_camera">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.0"/>
+        <inertia ixx="0.00029" ixy="0" ixz="0" iyy="0.00027" iyz="0" izz="0.00015"/>
+      </inertial>
+      <visual name="camera">
+        <origin xyz="0 0 0" rpy="0 -1.5708 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.018.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+
+    <link name="link_chassis">
+      <xacro:inertial_box mass="0.5" x="0" y="0" z="0">
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:inertial_box>
+      <visual name="chassis">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.023.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="yellow"/>
+      </visual>
+      <collision name="chassis">
+        <origin xyz="-0.00938 0.00061 0.0515" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.23282 0.175 0.109"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_laser">
+      
+      
+      <visual name="laser">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.019.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="laser">
+        <origin xyz="0 0 -0.01048" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.038 0.038 0.034"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_caster">
+      
+      <visual name="wheel_caster">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cube.020.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="wheel_caster">
+        <origin xyz="2e-05 0 0.01285" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.0235"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_left">
+      
+      <visual name="wheel_left">
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cylinder.036.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="wheel_left">
+        <origin xyz="0 0 -0.00264" rpy="-3.14159 0 0"/>
+        <geometry>
+          <cylinder radius="0.03446" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_right">
+      
+      <visual name="wheel_right">
+        <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find wally)/meshes/stl/Cylinder.037.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="wheel_right">
+        <origin xyz="0 0 -0.00264" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03446" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="joint_chassis" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_chassis"/>
+    </joint>
+
+    <joint name="joint_camera" type="fixed">
+      <origin xyz="0.0995 0.00066 0.07561" rpy="0 1.5708 0"/>
+      <parent link="link_chassis"/>
+      <child link="link_camera"/>
+    </joint>
+
+    <joint name="joint_laser" type="fixed">
+      <origin xyz="-0.01313 0.00061 0.13348" rpy="0 0 0"/>
+      <parent link="link_chassis"/>
+      <child link="link_laser"/>
+    </joint>
+
+    <joint name="joint_wheel_caster" type="fixed">
+      <origin xyz="-0.09896 0.00061 -0.00789" rpy="0 0 0"/>
+      <parent link="link_chassis"/>
+      <child link="link_wheel_caster"/>
+    </joint>
+
+    <joint name="joint_wheel_left" type="continuous">
+      <origin xyz="0.00602 0.07967 0.01615" rpy="-1.5708 0 0"/>
+      <parent link="link_chassis"/>
+      <child link="link_wheel_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="joint_wheel_right" type="continuous">
+      <origin xyz="0.00602 -0.07967 0.01615" rpy="1.5708 0 0"/>
+      <parent link="link_chassis"/>
+      <child link="link_wheel_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <material name="black">
+      <color rgba="0.8 0.8 0.8 1.0"/>
+    </material>
+
+    <material name="yellow">
+      <color rgba="0.8 0.8 0.8 1.0"/>
+    </material>
+
+  </robot>
